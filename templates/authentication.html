@@ -1,2 +1,10 @@
 <h1>Authentication</h1>
 <div>Click <a href='{{authorize_url}}' target='_blank'>here</a> to get your authentication code!</div>
+
+{% block content %}
+<form action="" method="post" name="login">
+    {{form.hidden_tag()}}
+    <p> Please enter your authentication code: {{form.openid(size=80)}} </p>
+    <p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}
